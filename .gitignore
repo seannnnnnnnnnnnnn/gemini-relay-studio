@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+data/
+dist/
+tailscale-env-results/
+mascot/
+node_modules/
+node_runtime/
+memory/
+MEMORY.md
+.DS_Store
+npm-debug.log*
+*.log
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal

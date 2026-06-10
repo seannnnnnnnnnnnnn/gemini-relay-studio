@@ -1,0 +1,40 @@
+{
+  "name": "veo3-workflow",
+  "version": "0.2.0",
+  "productName": "Gemini Relay Studio",
+  "description": "Local AI video generation studio for Gemini, Veo and OneAPI-compatible gateways.",
+  "main": "electron/main.js",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "start": "node --no-warnings server/index.js",
+    "dev": "node --no-warnings --watch server/index.js",
+    "web:dev": "vite --host 127.0.0.1",
+    "web:build": "vite build",
+    "desktop:dev": "npm run web:build && electron .",
+    "mascot:dev": "electron mascot",
+    "mascot:package:mac": "node mascot/scripts/package-mac.js",
+    "prepackage:mac": "npm run web:build",
+    "package:mac": "node scripts/package-desktop.js mac",
+    "prepackage:win": "npm run web:build",
+    "package:win": "node scripts/package-desktop.js win",
+    "prepackage:all": "npm run web:build",
+    "package:all": "node scripts/package-desktop.js all"
+  },
+  "devDependencies": {
+    "@electron/packager": "^19.0.1",
+    "@vitejs/plugin-react": "^6.0.2",
+    "autoprefixer": "^10.5.0",
+    "electron": "^39.0.0",
+    "postcss": "^8.5.15",
+    "tailwindcss": "^3.4.17",
+    "vite": "^8.0.14"
+  },
+  "dependencies": {
+    "lucide-react": "^1.17.0",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
+  }
+}
