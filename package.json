@@ -1,6 +1,6 @@
 {
   "name": "veo3-workflow",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "productName": "Gemini Relay Studio",
   "description": "Local AI video generation studio for Gemini, Veo and OneAPI-compatible gateways.",
   "main": "electron/main.js",
@@ -24,6 +24,8 @@
     "package:all": "node scripts/package-desktop.js all"
   },
   "devDependencies": {
+    "@electron/notarize": "^3.1.1",
+    "@electron/osx-sign": "^2.4.0",
     "@electron/packager": "^19.0.1",
     "@vitejs/plugin-react": "^6.0.2",
     "autoprefixer": "^10.5.0",

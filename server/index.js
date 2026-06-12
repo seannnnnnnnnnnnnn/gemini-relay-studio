@@ -148,7 +148,7 @@ function diagnosticReport() {
     generatedAt: new Date().toISOString(),
     app: {
       name: "Gemini Relay Studio",
-      version: "0.2.0",
+      version: "0.2.1",
       node: process.version,
       platform: process.platform,
       arch: process.arch

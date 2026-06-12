@@ -33,11 +33,23 @@ Use editable OneAPI / New API routes for text, image, video creation, native ref
 
 Use the latest GitHub Release for desktop builds:
 
-- **macOS Apple Silicon**: `Gemini Relay Studio-darwin-arm64.zip`
-- **macOS Intel**: `Gemini Relay Studio-darwin-x64.zip`
-- **Windows x64**: `Gemini Relay Studio-win32-x64.zip`
+- **macOS Apple Silicon**: `Gemini-Relay-Studio-macOS-arm64-v0.2.1.zip`
+- **macOS Intel**: `Gemini-Relay-Studio-macOS-x64-v0.2.1.zip`
+- **Windows x64**: `Gemini-Relay-Studio-Windows-x64-v0.2.1.zip`
 
 Unzip the package and launch the app. On first start, configure the API gateway in the API settings panel.
+
+### macOS Installation
+
+Gatekeeper-ready distribution requires an Apple Developer ID signature and Apple
+notarization. When a release is marked as an ad-hoc signed build, unzip it, move
+the app to `Applications`, then Control-click the app and choose **Open**. On
+newer macOS versions, use **System Settings > Privacy & Security > Open Anyway**
+if the first launch is blocked.
+
+Release builds are verified with `codesign --verify --deep --strict`. Maintainers
+can produce a fully notarized build by installing a `Developer ID Application`
+certificate and setting `MAC_CODESIGN_IDENTITY` plus `APPLE_NOTARY_PROFILE`.
 
 ## Requirements
 
